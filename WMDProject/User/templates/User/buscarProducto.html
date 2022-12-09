@@ -1,1 +1,39 @@
 {% extends 'User/plantilla.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Buscar comida</h2>
+<br>
+<div class="row">
+    <div class="col-3">
+        <img src="{% static 'User/images/comida.jpg' %}" width="80%" align="right">
+    </div> 
+    <div class="col-3">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Tipo de comida
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Comida china</a></li>
+              <li><a class="dropdown-item" href="#">Pizza</a></li>
+              <li><a class="dropdown-item" href="#">Pollo asado</a></li>
+              <li><a class="dropdown-item" href="#">Sandwich</a></li>
+            </ul>
+        </div>
+        <br>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Restaurante
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Chinito won</a></li>
+              <li><a class="dropdown-item" href="#">Don Poggetto</a></li>
+              <li><a class="dropdown-item" href="#">Donde la Dany</a></li>
+              <li><a class="dropdown-item" href="#">La esquina</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-6"></div> 
+</div>
+
+{% endblock %}
